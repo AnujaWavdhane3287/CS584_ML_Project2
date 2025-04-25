@@ -9,6 +9,69 @@ This project is a full **from-scratch implementation of a Gradient Boosting Tree
 | A20560966  | Suhasi Gadge         | sgadge@hawk.iit.edu         |
 | A20537626  | Vaishnavi Saundankar | vsaundankar@hawk.iit.edu    |
 ---
+### 🛠️ How to Run This Project
+
+To get started with this boosting classifier, follow these setup and execution steps:
+
+---
+
+###  Project Structure
+
+```
+BoostingProject/
+├── cls_boosting.py              # Main model implementation
+├── tests/
+│   ├── test_cls_boosting.py     # Unit-level functional tests
+│   └── test_custom_dataset.py   # Advanced dataset challenges
+├── venv
+├── visualize_cls_boosting.ipynb # All plots + decision boundaries
+└── README.md                    # This file!
+└── requriements.txt
+```
+
+---
+
+####  Step 1: Set Up Your Environment
+
+If you're starting from scratch:
+
+```bash
+python -m venv venv
+source venv/bin/activate     # On Windows: venv\\Scripts\\activate
+pip install numpy matplotlib pytest  #if not already installed
+```
+
+---
+
+#### Step 2: Run the Tests
+
+Run both test files with detailed, interactive output:
+
+```bash
+# Run unit-level boosting tests
+python -m pytest -s -v tests/test_cls_boosting.py
+
+# Run dataset-based evaluations
+python -m pytest -s -v tests/test_custom_dataset.py
+```
+
+These will display detailed stats like accuracy, precision, recall, F1-score, and class predictions for each case.
+
+---
+
+#### Step 3: View Visualizations
+
+To better understand how the model behaves, run the notebook with all charts:
+
+```bash
+jupyter notebook visualize_cls_boosting.ipynb
+```
+
+---
+
+# Question & Answer
+
+---
 
 ##  What does this model do?
 
@@ -91,23 +154,7 @@ You’ll find all of this in `visualize_cls_boosting.ipynb`, cleanly organized w
 
 ---
 
-##  Project Structure
-
-```
-BoostingProject/
-├── cls_boosting.py              # Main model implementation
-├── tests/
-│   ├── test_cls_boosting.py     # Unit-level functional tests
-│   └── test_custom_dataset.py   # Advanced dataset challenges
-├── venv
-├── visualize_cls_boosting.ipynb # All plots + decision boundaries
-└── README.md                    # This file!
-└── requriements.txt
-```
-
----
-
-## ▶️ Example Usage
+##  Example Usage
 
 ```python
 from cls_boosting import BoostingClassifier
@@ -137,15 +184,11 @@ print(preds)
 -  Limitations handled or documented
 
 ---
-Sure! Below is the updated README with a new section titled **📊 Visualization Results**, where you can paste your decision boundary plots, line graphs, and histograms directly. This is formatted with markdown placeholders so you can easily drop in the figures from your Jupyter notebook (copy-paste the image or use `![caption](path)` format on GitHub).
-
----
-
-### 📊 Visualization Results
+### Visualization Results
 
 To better understand how the model behaves, we visualized both the **decision boundaries** and **metric trends** during training.
 
-#### 🔸 Decision Boundary Plots
+#### Decision Boundary Plots
 
 These plots show how the model separates classes across different kinds of datasets:
 
@@ -174,7 +217,7 @@ These plots show how the model separates classes across different kinds of datas
 
 ---
 
-#### 🔸 Metric Tracking (Training Trends)
+#### Metric Tracking (Training Trends)
 
 These charts show how performance evolves with more trees (boosting rounds):
 
